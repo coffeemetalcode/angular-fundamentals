@@ -4,11 +4,10 @@ import { ToastrService } from '../common/toastr.service';
 
 declare let toastr;
 @Component({
-  selector: 'events-list',
   templateUrl: './events-list.component.html',
   styleUrls: ['./events-list.component.scss']
 })
-export class EventListComponent implements OnInit {
+export class EventsListComponent implements OnInit {
   events: any[];
 
   constructor(
@@ -18,7 +17,6 @@ export class EventListComponent implements OnInit {
 
   ngOnInit() {
     this.events = this.eventService.getEvents();
-
   }
 
   handleThumbnailClick(eventName) {
