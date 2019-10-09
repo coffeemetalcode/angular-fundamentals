@@ -11,9 +11,11 @@ import { EventThumbnailComponent } from './events/event-thumbnail.component';
 import { NavBarComponent } from './nav/navbar.component';
 import { appRoutes } from './routes';
 
-import { ToastrService } from './common/toastr.service';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
 import { EventService } from './events/shared/event.service';
+import { EventListResolver } from './events/events-list-resolver.service';
+
+import { ToastrService } from './common/toastr.service';
 
 @NgModule({
   imports: [
@@ -36,6 +38,7 @@ import { EventService } from './events/shared/event.service';
       useValue: checkDirtyState
     },
     EventService,
+    EventListResolver,
     ToastrService
   ],
   bootstrap: [EventsAppComponent]
