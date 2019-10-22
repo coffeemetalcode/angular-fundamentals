@@ -5,3 +5,13 @@
 #serchForm {
   margin-right: 100px;
 }
+
+@media (max-width: 1200px) {
+  #serchForm {
+    display: none;
+  }
+}
+
+li > a.active {
+  color: #F97924;
+}

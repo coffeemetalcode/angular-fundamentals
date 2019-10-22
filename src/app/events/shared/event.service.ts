@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { EventsAppComponent } from 'src/app/events-app.component';
 
 @Injectable()
 export class EventService {
   getEvents() {
     // tslint:disable-next-line: no-use-before-declare
-    let subject = new Subject()
+    const subject = new Subject()
     setTimeout(() => {
+      // tslint:disable-next-line: no-use-before-declare
       subject.next(EVENTS); subject.complete();
-    }, 2000);
+    }, 100);
     return subject;
   }
 
