@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -11,7 +11,8 @@ import { ProfileComponent } from './profile.component';
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild(userRoutes)
+    RouterModule.forChild(userRoutes),
+    ReactiveFormsModule
   ],
   declarations: [
     LoginComponent,
